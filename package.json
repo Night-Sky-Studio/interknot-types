@@ -1,6 +1,6 @@
 {
     "name": "@interknot/types",
-    "version": "0.1.2-beta",
+    "version": "v0.1.3-beta",
     "module": "dist/index.ts",
     "types": "dist/index.d.ts",
     "exports": {
