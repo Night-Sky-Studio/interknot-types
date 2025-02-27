@@ -1,9 +1,9 @@
-import type { IProperty } from "./Property"
+import type { Property } from "./Property"
 
 export interface Equipment {
     Id: number
     Name: string
     Rarity: number
     IconUrl: string
-    SetBonusProps: IProperty[]
+    SetBonusProps: Property[]
 }

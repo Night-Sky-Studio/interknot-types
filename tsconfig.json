@@ -9,6 +9,7 @@
     "allowJs": true,
 
     "noEmit": true,
+    "moduleResolution": "bundler",
 
     // Best practices
     "strict": true,
