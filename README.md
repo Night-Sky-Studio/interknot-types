@@ -1,15 +1,12 @@
-# @interknot/types
+# Inter-Knot Types
 
-To install dependencies:
+Types for Inter-Knot Data Server API.
+
+Unless, there's a need, this project won't be published in the `npm` repository.
+
+## Usage
+To install in your project:
 
 ```bash
-bun install
+bun install git+https://github.com/Night-Sky-Studio/interknot-types.git
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

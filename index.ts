@@ -1,7 +1,7 @@
 import type { BaseAvatar, Avatar } from "./types/Avatar"
 import type { Character } from "./types/Character"
 import type { CritValue } from "./types/CritValue"
-import type { DriveDisk } from "./types/DriveDisk"
+import type { DriveDisc } from "./types/DriveDisc"
 import type { Equipment } from "./types/Equipment"
 import type { Medal } from "./types/Medal"
 import type { Profile } from "./types/Profile"
@@ -15,7 +15,7 @@ export type {
     Avatar,
     Character,
     CritValue,
-    DriveDisk,
+    DriveDisc,
     Equipment,
     Medal,
     Profile,

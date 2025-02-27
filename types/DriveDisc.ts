@@ -7,7 +7,7 @@ export type DriveDiskSet = {
     Set: Equipment
 }
 
-export interface DriveDisk extends Equipment {
+export interface DriveDisc extends Equipment {
     Id: number
     Uid: number
     SetId: number
