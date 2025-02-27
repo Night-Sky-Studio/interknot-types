@@ -21,7 +21,7 @@ export type {
     Profile,
     Talents,
     PropertyType,
-    IProperty as Property,
+    IProperty,
     Skin,
     Title,
     Weapon,
