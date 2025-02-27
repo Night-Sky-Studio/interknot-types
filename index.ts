@@ -1,5 +1,5 @@
 import type { BaseAvatar, Avatar } from "./types/Avatar"
-import type { Character } from "./types/Character"
+import type { Character, Talents } from "./types/Character"
 import type { CritValue } from "./types/CritValue"
 import type { DriveDisc } from "./types/DriveDisc"
 import type { Equipment } from "./types/Equipment"
@@ -19,6 +19,7 @@ export type {
     Equipment,
     Medal,
     Profile,
+    Talents,
     Property,
     Skin,
     Title,
