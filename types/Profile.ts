@@ -2,7 +2,7 @@ import type { Character } from "./Character"
 import type { Medal } from "./Medal"
 import type { Title } from "./Title"
 
-enum MainCharacter {
+export enum MainCharacter {
     "Wise" = 2011,
     "Belle" = 2021
 }
