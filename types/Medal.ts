@@ -1,5 +1,5 @@
 enum MedalType {
-    "Shiyu Defence" = 1,
+    "Shiyu Defense" = 1,
     "Simulated Battle Tower" = 2,
     "Deadly Assault" = 3,
     "Simulated Battle Tower - Last Stand" = 4

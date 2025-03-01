@@ -1,6 +1,6 @@
 import type { CritValue } from "./CritValue"
 import type { Equipment } from "./Equipment"
-import type { Property } from "./Property"
+import type { DataProperty } from "./Property"
 
 export type DriveDiskSet = {
     Count: number,
@@ -17,7 +17,7 @@ export interface DriveDisc extends Equipment {
     Rarity: number
     Level: number
     BreakLevel: number
-    MainStat: Property
-    SubStats: Property[],
+    MainStat: DataProperty
+    SubStats: DataProperty[],
     CritValue: CritValue
 }
