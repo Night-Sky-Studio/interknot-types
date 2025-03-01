@@ -52,4 +52,9 @@ export class Property {
     subtract(other: Property): Property {
         return new Property(this.Id, this.Name, this.Value - other.Value, this.Level)
     }
+
+    setValue(value: number) {
+        this.BaseValue = value
+        return this
+    }
 }
