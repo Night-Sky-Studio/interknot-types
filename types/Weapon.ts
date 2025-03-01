@@ -1,4 +1,4 @@
-import type { DataProperty } from "./Property"
+import type { Property } from "./Property"
 
 export interface BaseWeapon {
     Id: number
@@ -6,8 +6,8 @@ export interface BaseWeapon {
     Rarity: number
     ProfessionType: string
     ImageUrl: string
-    MainStat: DataProperty
-    SecondaryStat: DataProperty
+    MainStat: Property
+    SecondaryStat: Property
 }
 
 export interface Weapon extends BaseWeapon {
