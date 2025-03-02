@@ -21,7 +21,6 @@ export interface ProfileInfo {
 }
 
 export interface Profile {
-    Ttl: number
     Information: ProfileInfo
     Characters: Character[]
 }
