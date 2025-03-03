@@ -6,7 +6,6 @@ export enum MainCharacter {
     "Wise" = 2011,
     "Belle" = 2021
 }
-
 export interface ProfileInfo {
     Uid: number
     Nickname: string
@@ -21,6 +20,7 @@ export interface ProfileInfo {
 }
 
 export interface Profile {
+    Ttl: number
     Information: ProfileInfo
     Characters: Character[]
 }
