@@ -22,6 +22,7 @@ export interface WeaponData extends BaseWeapon {
 
 export interface WeaponEntry {
     Id: number
+    Name: string
     Damage: number
     Players: number
     Rank: number
