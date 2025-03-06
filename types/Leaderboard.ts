@@ -14,6 +14,7 @@ export interface RawLeaderboardProfile {
 
 export interface WeaponData extends BaseWeapon {
     Id: number
+    BuildName: string
     Damage: number
     Players: number
     Rank: number
