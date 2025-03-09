@@ -13,6 +13,12 @@ export interface Talents {
     Assist: number
 }
 
+type CharacterStats = {
+    BaseStats: Property[],
+    WeaponStats: Property[],
+    BonusStats: Property[]
+}
+
 export interface Character extends BaseAvatar {
     Id: number
     Name: string
@@ -27,6 +33,6 @@ export interface Character extends BaseAvatar {
     IsHidden: boolean
     DriveDisks: DriveDisc[]
     DriveDisksSet: DriveDiskSet[]
-    BaseStats: Property[]
+    Stats: CharacterStats
     CritValue: number
 }
