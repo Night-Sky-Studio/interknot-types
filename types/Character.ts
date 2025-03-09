@@ -13,7 +13,7 @@ export interface Talents {
     Assist: number
 }
 
-type CharacterStats = {
+export interface CharacterStats {
     BaseStats: Property[],
     WeaponStats: Property[],
     BonusStats: Property[]
