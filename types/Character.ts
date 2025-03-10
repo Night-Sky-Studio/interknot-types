@@ -17,7 +17,7 @@ export interface CharacterStats {
     BaseStats: Property[],
     WeaponStats: Property[],
     BonusStats: Property[]
-    ComputedProps: Property[]
+    ComputedStats: Property[]
 }
 
 export interface Character extends BaseAvatar {
