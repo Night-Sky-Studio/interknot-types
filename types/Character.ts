@@ -34,6 +34,6 @@ export interface Character extends BaseAvatar {
     IsHidden: boolean
     DriveDisks: DriveDisc[]
     DriveDisksSet: DriveDiskSet[]
-    Stats: CharacterStats
+    Stats: Property[]
     CritValue: number
 }
