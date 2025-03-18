@@ -32,7 +32,7 @@ export interface Character extends BaseAvatar {
     Weapon: Weapon | null
     WeaponEffect: boolean | null
     IsHidden: boolean
-    DriveDisks: (DriveDisc | null)[]
+    DriveDisks: DriveDisc[]
     DriveDisksSet: DriveDiskSet[]
     Stats: Property[]
     CritValue: number
