@@ -1,5 +1,12 @@
 import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
+import { SkillTag } from "./SkillTag"
+
+export interface AgentAction {
+    Name: string
+    Tag: SkillTag
+    Damage: number
+}
 
 export interface LeaderboardAgent {
     LeaderboardId: number
@@ -9,8 +16,7 @@ export interface LeaderboardAgent {
     Team: BaseAvatar[]
     Rank: number
     Total: number
-    Rotation: string[]
-    RotationValue: number[]
+    Rotation: AgentAction[]
     TotalValue: number
 }
 
