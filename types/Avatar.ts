@@ -15,10 +15,10 @@ export interface BaseAvatar {
         Accent: string
         Mindscape: string
     }
+    HighlightProps: number[]
 }
 
 export interface Avatar extends BaseAvatar {
-    HighlightProps: number[]
     Skins: Skin[]
     BaseProps: Property[]
     GrowthProps: Property[]
