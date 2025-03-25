@@ -18,6 +18,7 @@ export interface BaseAvatar {
 }
 
 export interface Avatar extends BaseAvatar {
+    HighlightProps: number[]
     Skins: Skin[]
     BaseProps: Property[]
     GrowthProps: Property[]
