@@ -3,4 +3,5 @@ export interface Enemy {
     Level: number
     LevelFactor: number
     Defense: number
+    StunMultiplier: number
 }
