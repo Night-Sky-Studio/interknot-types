@@ -1,7 +1,7 @@
 import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
 import { SkillTag } from "./SkillTag"
-import { Enemy } from "./Enemy"
+import type { Enemy } from "./Enemy"
 
 export interface AgentAction {
     Name: string
