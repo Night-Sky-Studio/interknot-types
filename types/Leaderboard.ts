@@ -31,8 +31,8 @@ export interface Leaderboard {
     Name: string
     FullName: string
     Description: string
-    CharacterId: BaseAvatar
-    WeaponId: BaseWeapon
+    Character: BaseAvatar
+    Weapon: BaseWeapon
     Team: BaseAvatar[]
     Rotation: string[]
     Enemy: Enemy
