@@ -29,6 +29,7 @@ export interface LeaderboardProfile {
 export interface Leaderboard {
     Id: number
     ParentId?: number
+    Children: Leaderboard[]
     Name: string
     FullName: string
     Description: string
