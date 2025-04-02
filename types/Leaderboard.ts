@@ -2,6 +2,8 @@ import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
 import { SkillTag } from "./SkillTag"
 import type { Enemy } from "./Enemy"
+import { ProfileInfo } from "./Profile"
+import { Character } from "./Character"
 
 export interface AgentAction {
     Name: string
@@ -9,13 +11,18 @@ export interface AgentAction {
     Damage: number
 }
 
-export interface LeaderboardEntry {
+export interface BaseLeaderboardEntry {
     LeaderboardId: number
     Rotation: AgentAction[]
     TotalValue: number
 }
 
-export interface LeaderboardAgent extends LeaderboardEntry {
+export interface LeaderboardEntry extends BaseLeaderboardEntry {
+    Profile: ProfileInfo
+    Character: Character
+}
+
+export interface LeaderboardAgent extends BaseLeaderboardEntry {
     LeaderboardName: string
     Agent: BaseAvatar
     Weapon: BaseWeapon
