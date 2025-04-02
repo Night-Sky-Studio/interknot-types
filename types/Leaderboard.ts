@@ -9,23 +9,25 @@ export interface AgentAction {
     Damage: number
 }
 
-export interface LeaderboardAgent {
+export interface LeaderboardEntry {
     LeaderboardId: number
+    Rotation: AgentAction[]
+    TotalValue: number
+}
+
+export interface LeaderboardAgent extends LeaderboardEntry {
     LeaderboardName: string
     Agent: BaseAvatar
     Weapon: BaseWeapon
     Team: BaseAvatar[]
     Rank: number
     Total: number
-    Rotation: AgentAction[]
-    TotalValue: number
 }
 
 export interface LeaderboardProfile {
     Uid: number
     Agents: LeaderboardAgent[]
 }
-
 export interface Leaderboard {
     Id: number
     ParentId?: number
