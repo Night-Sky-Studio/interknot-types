@@ -35,5 +35,6 @@ export interface Character extends BaseAvatar {
     DriveDisks: DriveDisc[]
     DriveDisksSet: DriveDiskSet[]
     Stats: Property[]
+    DisplayProps: number[]
     CritValue: number
 }
