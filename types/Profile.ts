@@ -12,7 +12,7 @@ export interface ProfileInfo {
     Description: string
     MainCharacter: MainCharacter
     Level: number
-    Title: Title
+    Title: Title | null
     ProfilePictureUrl: string
     Platform: string
     NamecardUrl: string
