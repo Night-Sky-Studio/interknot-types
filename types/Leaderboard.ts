@@ -22,6 +22,7 @@ export interface BaseLeaderboardEntry {
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
     Profile: ProfileInfo
     Character: Character
+    FinalStats: Record<number, number>
 }
 
 export interface LeaderboardAgent extends BaseLeaderboardEntry {
