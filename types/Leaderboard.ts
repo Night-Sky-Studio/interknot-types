@@ -19,10 +19,15 @@ export interface BaseLeaderboardEntry {
     Total: number
 }
 
+export interface FinalStats {
+    BaseStats: Record<number, number>
+    PassiveStats: Record<number, number>
+}
+
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
     Profile: ProfileInfo
     Character: Character
-    FinalStats: Record<number, number>
+    FinalStats: FinalStats
 }
 
 export interface LeaderboardAgent extends BaseLeaderboardEntry {
