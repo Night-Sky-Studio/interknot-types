@@ -21,7 +21,7 @@ export interface BaseLeaderboardEntry {
 
 export interface FinalStats {
     BaseStats: Record<number, number>
-    PassiveStats: Record<number, number>
+    CalculatedStats: Record<number, number>
 }
 
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
