@@ -4,6 +4,7 @@ import { SkillTag } from "./SkillTag"
 import type { Enemy } from "./Enemy"
 import { ProfileInfo } from "./Profile"
 import { Character } from "./Character"
+import { Property } from "./Property"
 
 export interface AgentAction {
     Name: string
@@ -20,8 +21,8 @@ export interface BaseLeaderboardEntry {
 }
 
 export interface FinalStats {
-    BaseStats: Record<number, number>
-    CalculatedStats: Record<number, number>
+    BaseStats: Property[]
+    CalculatedStats: Property[]
 }
 
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
