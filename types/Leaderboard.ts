@@ -26,7 +26,7 @@ export interface FinalStats {
 
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
     Profile: ProfileInfo
-    Character: BaseAvatar
+    Character: Character
     FinalStats: FinalStats
 }
 
