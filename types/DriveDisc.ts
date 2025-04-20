@@ -2,7 +2,7 @@ import type { CritValue } from "./CritValue"
 import type { Equipment } from "./Equipment"
 import type { Property } from "./Property"
 
-export type DriveDiskSet = {
+export type DriveDiscSet = {
     Count: number,
     Set: Equipment
 }

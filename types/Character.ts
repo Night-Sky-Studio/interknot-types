@@ -1,5 +1,5 @@
 import type { BaseAvatar } from "./Avatar"
-import type { DriveDisc, DriveDiskSet } from "./DriveDisc"
+import type { DriveDisc, DriveDiscSet } from "./DriveDisc"
 import type { Property } from "./Property"
 import type { Skin } from "./Skin"
 import type { Weapon } from "./Weapon"
@@ -33,7 +33,7 @@ export interface Character extends BaseAvatar {
     WeaponEffect: boolean | null
     IsHidden: boolean
     DriveDisks: DriveDisc[]
-    DriveDisksSet: DriveDiskSet[]
+    DriveDisksSet: DriveDiscSet[]
     Stats: Property[]
     DisplayProps: number[]
     CritValue: number
