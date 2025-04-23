@@ -57,3 +57,8 @@ export interface Leaderboard {
     MindscapeLevelMin: number
     Total: number
 }
+
+export interface LeaderboardDistribution {
+    Data: Record<number, number>
+    UpdatedAt: Date
+}
