@@ -60,5 +60,5 @@ export interface Leaderboard {
 
 export interface LeaderboardDistribution {
     Data: Record<number, number>
-    UpdatedAt: Date
+    UpdatedAt: string
 }
