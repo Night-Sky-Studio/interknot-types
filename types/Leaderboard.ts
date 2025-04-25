@@ -60,6 +60,6 @@ export interface Leaderboard {
 
 export interface LeaderboardDistribution {
     Data: Record<number, number>
-    Top10AverageStats: Record<number, number>
+    Top1AvgStats: Record<number, number>
     UpdatedAt: string
 }
