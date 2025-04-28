@@ -2,8 +2,8 @@ import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
 import { SkillTag } from "./SkillTag"
 import type { Enemy } from "./Enemy"
-import { ProfileInfo } from "./Profile"
-import { Character } from "./Character"
+import type { ProfileInfo } from "./Profile"
+import type { Character } from "./Character"
 import { Property } from "./Property"
 
 export interface AgentAction {
