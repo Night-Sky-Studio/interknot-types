@@ -13,8 +13,7 @@ export interface AgentAction {
 }
 
 export interface BaseLeaderboardEntry {
-    LeaderboardId: number
-    Rotation: AgentAction[]
+    Leaderboard: Leaderboard
     TotalValue: number
     Rank: number
     Total: number
@@ -31,16 +30,9 @@ export interface LeaderboardEntry extends BaseLeaderboardEntry {
     FinalStats: FinalStats
 }
 
-export interface LeaderboardAgent extends BaseLeaderboardEntry {
-    LeaderboardName: string
-    Agent: BaseAvatar
-    Weapon: BaseWeapon
-    Team: BaseAvatar[]
-}
-
 export interface LeaderboardProfile {
     Uid: number
-    Agents: LeaderboardAgent[]
+    Agents: BaseLeaderboardEntry[]
 }
 export interface Leaderboard {
     Id: number
