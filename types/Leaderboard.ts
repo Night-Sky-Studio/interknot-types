@@ -42,6 +42,7 @@ export interface Leaderboard {
     Name: string
     FullName: string
     Description: string
+    BackgroundUrl: string
     Character: BaseAvatar
     Weapon: BaseWeapon
     Team: BaseAvatar[]
