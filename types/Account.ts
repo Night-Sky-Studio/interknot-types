@@ -8,6 +8,6 @@ export interface Account {
     PatreonStatus?: boolean
     EnkaPatreonStatus?: boolean
     ClaimedProfiles: ProfileInfo[]
-    ActiveType: "discord" | "patreon"
+    Provider: "discord" | "patreon"
     LinkedAccount?: Account
 }
