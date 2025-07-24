@@ -1,42 +1,17 @@
 export interface Error {
-    code: number
-    message: string
-    details?: string[]
+    Code: number
+    Message: string
+    Details?: string
 }
 
-export class Optional<TResult> {
-    private value: [TResult?, Error?] = [undefined, undefined]
+export type Optional<TResult, TError = Error> = [TResult?, TError?]
 
-    constructor(result?: TResult, error?: Error) {
-        this.value = [result, error]
-    }
-
+export class Result {
     static ok<TResult>(result: TResult): Optional<TResult> {
-        return new Optional(result, undefined)
+        return [result, undefined]
     }
 
-    static err<TResult>(error: Error): Optional<TResult> {
-        return new Optional(undefined as any, error)
-    }
-
-    result(): TResult | undefined {
-        return this.value[0]
-    }
-
-    error(): Error | undefined {
-        return this.value[1]
-    }
-
-    get isOk(): boolean {
-        return this.value[0] !== undefined && this.value[1] === undefined
-    }
-
-    get isErr(): boolean {
-        return this.value[1] !== undefined
-    }
-
-    *[Symbol.iterator](): Iterator<TResult | Error> {
-        yield this.value[0]!
-        yield this.value[1]!
+    static err(error: Error): Optional<never> {
+        return [undefined, error]
     }
 }
