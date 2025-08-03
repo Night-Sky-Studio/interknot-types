@@ -1,5 +1,4 @@
 import type { Character } from "./Character"
-import { BaseLeaderboardEntry } from "./Leaderboard"
 import type { Medal } from "./Medal"
 import type { Title } from "./Title"
 
@@ -24,5 +23,4 @@ export interface Profile {
     Ttl: number
     Information: ProfileInfo
     Characters: Character[]
-    Leaderboards: BaseLeaderboardEntry[]
 }
