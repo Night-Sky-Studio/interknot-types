@@ -16,4 +16,5 @@ export interface Medal {
     MedalType: MedalType
     MedalIcon: MedalIcon
     Value: number
+    MedalScore: number
 }
