@@ -14,9 +14,7 @@ export interface AgentAction {
 
 export interface BaseLeaderboardEntry {
     Leaderboard: Leaderboard
-    TotalDamage: number
-    TotalDaze: number
-    TotalHeal: number
+    TotalValue: number
     RotationValue: AgentAction[]
     Rank: number
     Total: number
