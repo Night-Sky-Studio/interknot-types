@@ -22,7 +22,7 @@ export class Result {
             code, message
         }
     }
-    static pagedOk<T>(page: number, totalPages: number, data: T[]): IPagedResult<T> {
+    static okPaged<T>(page: number, totalPages: number, data: T[]): IPagedResult<T> {
         return {
             code: 0,
             message: "",
