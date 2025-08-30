@@ -17,7 +17,7 @@ export class Result {
             data
         }
     }
-    static err(code: number, message: string): IResult<undefined> {
+    static err<T>(code: number, message: string): IResult<T> {
         return {
             code, message
         }
