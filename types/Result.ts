@@ -17,9 +17,13 @@ export class Result {
             data
         }
     }
-    static err<T>(code: number, message: string): IResult<T> {
+    static err<TResult extends IResult<any>>(
+        code: number, 
+        message: string, 
+        extra?: Omit<TResult, "code" | "message" | "data">
+    ): TResult {
         return {
-            code, message
+            code, message, ...(extra as any)
         }
     }
     static okPaged<T>(page: number, totalPages: number, data: T[]): IPagedResult<T> {
