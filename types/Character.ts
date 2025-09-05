@@ -13,21 +13,11 @@ export interface Talents {
     Assist: number
 }
 
-export interface CharacterStats {
-    BaseStats: Property[],
-    WeaponStats: Property[],
-    BonusStats: Property[]
-    ComputedStats: Property[]
-}
-
 export interface Character extends BaseAvatar {
-    Id: number
-    Name: string
     Level: number
     PromotionLevel: number
     Skin: Skin | null
     MindscapeLevel: number
-    CoreSkillEnhancement: number
     SkillLevels: Talents
     Weapon: Weapon | null
     WeaponEffect: boolean | null

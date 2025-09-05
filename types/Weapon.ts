@@ -1,11 +1,14 @@
 import type { Property } from "./Property"
 
-export interface BaseWeapon {
+export interface WeaponInfo {
     Id: number
     Name: string
     Rarity: number
     ProfessionType: string
     ImageUrl: string
+}
+
+export interface BaseWeapon extends WeaponInfo {
     MainStat: Property
     SecondaryStat: Property
 }

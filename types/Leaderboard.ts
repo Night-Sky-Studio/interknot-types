@@ -12,17 +12,16 @@ export interface AgentAction {
     Damage: number
 }
 
-export interface BaseLeaderboardEntry {
-    Leaderboard: Leaderboard
-    TotalValue: number
-    RotationValue: AgentAction[]
-    Rank: number
-    Total: number
-}
-
 export interface FinalStats {
     BaseStats: Property[]
     CalculatedStats: Property[]
+}
+
+export interface BaseLeaderboardEntry {
+    Leaderboard: BaseLeaderboard
+    TotalValue: number
+    RotationValue: AgentAction[]
+    Rank: number
 }
 
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
@@ -35,21 +34,34 @@ export interface LeaderboardProfile {
     Uid: number
     Agents: BaseLeaderboardEntry[]
 }
-export interface Leaderboard {
+
+export interface LeaderboardTeamMember {
+    Character: BaseAvatar | null
+    MindscapeLevel: number
+    Weapon: BaseWeapon | null
+    WeaponRefinement: number | null
+    /** `setId: count` */
+    DriveDiscSetId: number | null
+}
+
+export interface BaseLeaderboard {
     Id: number
+    Name: string
+    Character: BaseAvatar
+    Weapon: BaseWeapon
+    MindscapeLevelMin: number
+    Total: number
+}
+
+export interface Leaderboard extends BaseLeaderboard {
     ParentId?: number
     Children: Leaderboard[]
-    Name: string
     FullName: string
     Description: string
     BackgroundUrl: string
-    Character: BaseAvatar
-    Weapon: BaseWeapon
-    Team: BaseAvatar[]
+    Team: BaseAvatar[] // TODO: Replace with LeaderboardTeamMember[]
     Rotation: string[]
     Enemy: Enemy
-    MindscapeLevelMin: number
-    Total: number
 }
 
 export interface LeaderboardDistribution {
