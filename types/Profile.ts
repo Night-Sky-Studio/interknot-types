@@ -8,6 +8,7 @@ export enum MainCharacter {
 }
 export interface ProfileInfo {
     Uid: number
+    UpdatedAt: Date
     Nickname: string
     Description: string
     MainCharacter: MainCharacter
