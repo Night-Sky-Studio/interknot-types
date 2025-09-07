@@ -1,12 +1,17 @@
-export interface IResult<T> {
+export interface IResult<TData> {
     code: number,
     message: string,
-    data?: T
+    data?: TData
 }
 
-export interface IPagedResult<T> extends IResult<T[]> {
+export interface IPagedResult<TData> extends IResult<TData[]> {
     page: number,
     totalPages: number
+}
+
+export interface ICursoredResult<TData, TCursor> extends IResult<TData[]> {
+    cursor: TCursor,
+    hasNextPage: boolean
 }
 
 export class Result {
@@ -22,13 +27,26 @@ export class Result {
             code, message
         }
     }
-    static okPaged<T>(page: number, totalPages: number, data: T[]): IPagedResult<T> {
+    static okPaged<TData>(page: number, totalPages: number, data: TData[]): IPagedResult<TData> {
         return {
             code: 0,
             message: "",
             data,
             page,
             totalPages
+        }
+    }
+    static okCursored<TData, TCursor>(
+        cursor: TCursor, 
+        hasNextPage: boolean, 
+        data: TData[]
+    ): ICursoredResult<TData, TCursor> {
+        return {
+            code: 0,
+            message: "",
+            data,
+            cursor,
+            hasNextPage
         }
     }
 }
