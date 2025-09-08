@@ -12,6 +12,7 @@ export interface IPagedResult<TData> extends IResult<TData[]> {
 export interface ICursoredResult<TData, TCursor> extends IResult<TData[]> {
     cursor?: TCursor,
     hasNextPage: boolean
+    totalCountHash: string
 }
 
 export class Result {
@@ -45,13 +46,15 @@ export class Result {
         hasNextPage: boolean, 
         /** No cursor - last page; `hasNextPage = false` */
         cursor?: TCursor, 
+        totalCountHash: string = ""
     ): ICursoredResult<TData, TCursor> {
         return {
             code: 0,
             message: "",
             data,
             cursor,
-            hasNextPage
+            hasNextPage,
+            totalCountHash
         }
     }
 }
