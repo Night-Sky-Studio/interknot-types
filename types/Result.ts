@@ -10,7 +10,7 @@ export interface IPagedResult<TData> extends IResult<TData[]> {
 }
 
 export interface ICursoredResult<TData, TCursor> extends IResult<TData[]> {
-    cursor: TCursor,
+    cursor?: TCursor,
     hasNextPage: boolean
 }
 
@@ -27,7 +27,11 @@ export class Result {
             code, message
         }
     }
-    static okPaged<TData>(page: number, totalPages: number, data: TData[]): IPagedResult<TData> {
+    static okPaged<TData>(
+        data: TData[],
+        page: number, 
+        totalPages: number
+    ): IPagedResult<TData> {
         return {
             code: 0,
             message: "",
@@ -37,9 +41,10 @@ export class Result {
         }
     }
     static okCursored<TData, TCursor>(
-        cursor: TCursor, 
+        data: TData[],
         hasNextPage: boolean, 
-        data: TData[]
+        /** No cursor - last page; `hasNextPage = false` */
+        cursor?: TCursor, 
     ): ICursoredResult<TData, TCursor> {
         return {
             code: 0,
