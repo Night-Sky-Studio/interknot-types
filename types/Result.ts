@@ -1,25 +1,27 @@
 export interface IResult<TData> {
-    code: number,
-    message: string,
+    code: number
+    message: string
+    ttl?: number
     data?: TData
 }
 
 export interface IPagedResult<TData> extends IResult<TData[]> {
-    page: number,
+    page: number
     totalPages: number
 }
 
 export interface ICursoredResult<TData, TCursor> extends IResult<TData[]> {
-    cursor?: TCursor,
+    cursor?: TCursor
     hasNextPage: boolean
     totalCountHash: string
 }
 
 export class Result {
-    static ok<T>(data: T): IResult<T> {
+    static ok<T>(data: T, ttl?: number): IResult<T> {
         return {
             code: 0,
             message: "",
+            ttl,
             data
         }
     }
