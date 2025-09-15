@@ -1,7 +1,7 @@
 export interface UrlParams {
     base: string,
     path?: string,
-    query?: Record<string, string>
+    query?: Record<string, string | undefined>
 } 
 
 export function url({ base, path, query }: UrlParams): string {
@@ -25,9 +25,9 @@ export function url({ base, path, query }: UrlParams): string {
     }
     if (query) {
         const params = Object.entries(query)
-            .filter(([, value]) => value !== "")
+            .filter(([, value]) => value !== undefined && value !== "")
             .map(([key, value]) => 
-                `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+                `${encodeURIComponent(key)}=${encodeURIComponent(value!)}`
             )
             .join("&")
         if (params) {
