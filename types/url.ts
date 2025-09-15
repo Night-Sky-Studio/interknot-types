@@ -1,11 +1,38 @@
-export function url(t: { base: string, path?: string, query?: Record<string, string>[] }) {
-    let e = ""
-    if ((t.base && ((e += t.base), t.base.endsWith("/") || (e += "/")), t.path && (t.path.startsWith("/") ? (e += t.path.substring(1)) : (e += t.path), t.path.endsWith("/") && (e = e.substring(0, e.length - 1))), t.query)) {
-        for (let s of ((e += "?"), t.query)) {
-            let n = Object.entries(s)[0];
-            "" !== n[1] && (e += n[0] + "=" + n[1] + "&");
+export interface UrlParams {
+    base: string,
+    path?: string,
+    query?: Record<string, string>
+} 
+
+export function url({ base, path, query }: UrlParams): string {
+    let result = ""
+    if (base) {
+        result += base
+        if (!base.endsWith("/")) {
+            result += "/"
         }
-        e = e.substring(0, e.length - 1);
     }
-    return e
+    if (path) {
+        if (path.startsWith("/")) {
+            result += path.substring(1)
+        } else {
+            result += path
+        }
+
+        if (path.endsWith("/")) {
+            result = result.slice(0, -1)
+        }
+    }
+    if (query) {
+        const params = Object.entries(query)
+            .filter(([, value]) => value !== "")
+            .map(([key, value]) => 
+                `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+            )
+            .join("&")
+        if (params) {
+            result += `?${params}`
+        }
+    }
+    return result
 }
