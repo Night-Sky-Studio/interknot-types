@@ -1,5 +1,6 @@
 export * from "./types/Account"
 export * from "./types/Avatar"
+export * from "./types/Build"
 export * from "./types/Character"
 export * from "./types/CritValue"
 export * from "./types/DriveDisc"
