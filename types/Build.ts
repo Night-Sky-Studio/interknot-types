@@ -25,5 +25,4 @@ export interface Build {
     ActiveLeaderboardId?: number
     IsPublic: boolean
     IsBanned: boolean
-    UpdatedAt: string
 }
