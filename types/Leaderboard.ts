@@ -47,6 +47,7 @@ export interface LeaderboardTeamMember {
 export interface BaseLeaderboard {
     Id: number
     Name: string
+    FullName: string
     Character: BaseAvatar
     Weapon: BaseWeapon
     MindscapeLevelMin: number
@@ -56,7 +57,6 @@ export interface BaseLeaderboard {
 export interface Leaderboard extends BaseLeaderboard {
     ParentId?: number
     Children: Leaderboard[]
-    FullName: string
     Description: string
     BackgroundUrl: string
     Team: BaseAvatar[] // TODO: Replace with LeaderboardTeamMember[]
