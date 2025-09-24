@@ -36,30 +36,43 @@ export interface LeaderboardProfile {
 }
 
 export interface LeaderboardTeamMember {
-    Character: BaseAvatar | null
+    Character?: BaseAvatar
+    Speciality?: string
     MindscapeLevel: number
-    Weapon: BaseWeapon | null
-    WeaponRefinement: number | null
+    Weapon?: BaseWeapon
+    WeaponRefinement?: number
     /** `setId: count` */
-    DriveDiscSetId: number | null
+    DriveDiscSetId?: number
 }
 
+/**
+ * Used for showing user's leaderboard entries on profile page
+ */
 export interface BaseLeaderboard {
     Id: number
-    ParentId?: number
-    Children: BaseLeaderboard[]
     Name: string
-    FullName: string
     Character: BaseAvatar
     Weapon: BaseWeapon
     MindscapeLevelMin: number
     Total: number
 }
 
-export interface Leaderboard extends BaseLeaderboard {
+/**
+ * Entries for table at `/leaderboards`
+ */
+export interface LeaderboardList extends BaseLeaderboard {
+    ParentId?: number
+    Children: BaseLeaderboard[]
+    FullName: string
+    Team: BaseAvatar[] // TODO: Replace with LeaderboardTeamMember[]
+}
+
+/**
+ * Full leaderboard data for `/leaderboards/{id}`
+ */
+export interface Leaderboard extends LeaderboardList {
     Description: string
     BackgroundUrl: string
-    Team: BaseAvatar[] // TODO: Replace with LeaderboardTeamMember[]
     Rotation: string[]
     Enemy: Enemy
 }
