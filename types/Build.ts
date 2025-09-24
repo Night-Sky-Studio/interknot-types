@@ -1,3 +1,4 @@
+import { Character } from "./Character"
 import { ProfileInfo } from "./Profile"
 
 export interface Transform {
@@ -19,6 +20,7 @@ export interface Build {
     Id: number
     Name?: string
     Owner?: ProfileInfo
+    Character: Character
     CardCustomization?: CardCustomization
     ActiveLeaderboardId?: number
     IsPublic: boolean
