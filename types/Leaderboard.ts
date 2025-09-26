@@ -19,6 +19,12 @@ export interface FinalStats {
 
 export interface BaseLeaderboardEntry {
     Leaderboard: BaseLeaderboard
+    /**
+     * - 0: Weapon Matches
+     * - 1: Weapon's Secondary Stat Matches
+     * - 2: Doesn't match
+     */
+    Type: number
     TotalValue: number
     RotationValue: AgentAction[]
     Rank: number
