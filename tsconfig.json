@@ -20,6 +20,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
+    "verbatimModuleSyntax": true,
     
     "declaration": true,
     "outDir": "dist"

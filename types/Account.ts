@@ -1,4 +1,4 @@
-import { ProfileInfo } from "./Profile"
+import { type ProfileInfo } from "./Profile"
 
 export interface Account {
     Id: number

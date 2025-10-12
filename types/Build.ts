@@ -1,5 +1,5 @@
-import { Character } from "./Character"
-import { ProfileInfo } from "./Profile"
+import { type Character } from "./Character"
+import { type ProfileInfo } from "./Profile"
 
 export interface Transform {
     X: number
