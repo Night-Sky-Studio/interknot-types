@@ -1,45 +1,30 @@
-type Predicate<TVal> = TVal | ((v: TVal) => boolean)
-type Handler<TVal, R> = R | ((v: TVal) => R)
+type FuncPredicate<TVal> = (v: TVal) => boolean
+type Predicate<TVal> = TVal | FuncPredicate<TVal>
+type FuncHandler<TVal, R> = (v: TVal) => R
+type Handler<TVal, R> = R | FuncHandler<TVal, R>
+
 export function match<TVal, R>(
     value: TVal,
-    ...patterns: [...Array<[Predicate<TVal>, Handler<TVal, R>]>, Handler<TVal, R>]
-): R;
-export function match<TVal, R>(
-    value: TVal,
-    ...patterns: Array<[Predicate<TVal>, Handler<TVal, R>] | Handler<TVal, R>>
+    patterns: [...Array<[Predicate<TVal>, Handler<TVal, R>]>, Handler<TVal, R>]
 ): R {
-    if (patterns.length === 0) {
-        throw new Error("match requires at least one pattern or a default.")
-    }
+    const [defaultHandler, rest] = !Array.isArray(patterns.at(-1))
+        ? [patterns.pop() as Handler<TVal, R>, patterns]
+        : [undefined, patterns]
 
-    let defaultHandler: R | ((v: TVal) => R) | undefined
-    const last = patterns[patterns.length - 1]
-
-    // If last is NOT an array, treat as default
-    if (!Array.isArray(last)) {
-        defaultHandler = last as R | ((v: TVal) => R)
-        patterns = patterns.slice(0, -1)
-    }
-
-    for (const entry of patterns as Array<[TVal | ((v: TVal) => boolean), R | ((v: TVal) => R)]>) {
-        const [test, handler] = entry
-        const matched =
-            typeof test === 'function'
-                ? (test as (v: TVal) => boolean)(value)
+    for (const [test, handler] of rest as Array<[Predicate<TVal>, Handler<TVal, R>]>) {
+        const matched = typeof test === "function" 
+                ? (test as FuncHandler<TVal, boolean>)(value) 
                 : Object.is(test, value)
-
-        if (matched) {
-            return typeof handler === 'function'
-                ? (handler as (v: TVal) => R)(value)
+        if (matched)
+            return typeof handler === "function" 
+                ? (handler as FuncHandler<TVal, R>)(value) 
                 : handler
-        }
     }
 
-    if (defaultHandler !== undefined) {
-        return typeof defaultHandler === 'function'
-            ? (defaultHandler as (v: TVal) => R)(value)
+    if (defaultHandler)
+        return typeof defaultHandler === "function"
+            ? (defaultHandler as FuncHandler<TVal, R>)(value)
             : defaultHandler
-    }
 
-    throw new Error("No match found and no default handler provided.")
+    throw new Error("No match found.")
 }
