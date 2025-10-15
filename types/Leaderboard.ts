@@ -5,6 +5,7 @@ import type { Enemy } from "./Enemy"
 import type { ProfileInfo } from "./Profile"
 import type { Character } from "./Character"
 import { Property } from "./Property"
+import type { Build } from "./Build"
 
 export interface AgentAction {
     Name: string
@@ -31,8 +32,7 @@ export interface BaseLeaderboardEntry {
 }
 
 export interface LeaderboardEntry extends BaseLeaderboardEntry {
-    Profile: ProfileInfo
-    Character: Character
+    Build: Build
     FinalStats: FinalStats
 }
 
