@@ -2,8 +2,6 @@ import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
 import { SkillTag } from "./SkillTag"
 import type { Enemy } from "./Enemy"
-import type { ProfileInfo } from "./Profile"
-import type { Character } from "./Character"
 import { Property } from "./Property"
 import type { Build } from "./Build"
 
