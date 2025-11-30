@@ -1,6 +1,11 @@
+export interface IError {
+    status: string
+    message?: string
+}
+
 export interface IResult<TData> {
     success: boolean
-    message: string
+    error?: IError
     ttl?: number
     data?: TData
 }
@@ -20,14 +25,16 @@ export class Result {
     static ok<T>(data: T, ttl?: number): IResult<T> {
         return {
             success: true,
-            message: "",
             ttl,
             data
         }
     }
-    static err(message: string): any {
+    static err(status: string, message?: string): any {
         return {
-            success: false, message
+            success: false, 
+            error: {
+                status, message
+            }
         }
     }
     static okPaged<TData>(
@@ -37,7 +44,6 @@ export class Result {
     ): IPagedResult<TData> {
         return {
             success: true,
-            message: "",
             data,
             page,
             totalPages
@@ -52,7 +58,6 @@ export class Result {
     ): ICursoredResult<TData> {
         return {
             success: true,
-            message: "",
             data,
             cursor,
             hasNextPage,
