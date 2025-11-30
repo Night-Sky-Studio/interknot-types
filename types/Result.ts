@@ -1,5 +1,5 @@
 export interface IResult<TData> {
-    code: number
+    success: boolean
     message: string
     ttl?: number
     data?: TData
@@ -19,15 +19,15 @@ export interface ICursoredResult<TData> extends IResult<TData[]> {
 export class Result {
     static ok<T>(data: T, ttl?: number): IResult<T> {
         return {
-            code: 0,
+            success: true,
             message: "",
             ttl,
             data
         }
     }
-    static err(code: number, message: string): any {
+    static err(message: string): any {
         return {
-            code, message
+            success: false, message
         }
     }
     static okPaged<TData>(
@@ -36,7 +36,7 @@ export class Result {
         totalPages: number
     ): IPagedResult<TData> {
         return {
-            code: 0,
+            success: true,
             message: "",
             data,
             page,
@@ -51,7 +51,7 @@ export class Result {
         totalCountHash: string = ""
     ): ICursoredResult<TData> {
         return {
-            code: 0,
+            success: true,
             message: "",
             data,
             cursor,
