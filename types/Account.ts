@@ -30,5 +30,6 @@ export interface Account {
     AccountLevel: AccountLevel
     ClaimedProfiles: ProfileInfo[]
     Provider: AuthProvider
+    ProviderId: string
     LinkedAccount?: Account
 }
