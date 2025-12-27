@@ -5,13 +5,27 @@ export enum AuthProvider {
     Patreon = "patreon"
 }
 
+export enum AccountLevel {
+    Regular = 0,
+
+    CertifiedProxy,
+    SeniorProxy,
+    EliteProxy,
+    LegendaryProxy,
+
+    DiscordServerBooster,
+    
+    EnkaSupporter,
+
+    Admin
+}
+
 export interface Account {
     Id: number
     Username: string
     ProfilePictureUrl: string
     Email: string
-    PatreonStatus?: boolean
-    EnkaPatreonStatus?: boolean
+    AccountLevel: AccountLevel
     ClaimedProfiles: ProfileInfo[]
     Provider: AuthProvider
     LinkedAccount?: Account
