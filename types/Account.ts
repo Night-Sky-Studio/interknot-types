@@ -8,6 +8,8 @@ export enum AuthProvider {
 export enum AccountLevel {
     Regular = 0,
 
+    PastSupporter,
+
     CertifiedProxy,
     SeniorProxy,
     EliteProxy,
