@@ -27,4 +27,5 @@ export interface Character extends BaseAvatar {
     Stats: Property[]
     DisplayProps: number[]
     CritValue: number
+    UpgradeLevel: number | null
 }
