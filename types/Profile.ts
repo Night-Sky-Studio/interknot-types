@@ -6,8 +6,16 @@ export enum MainCharacter {
     "Wise" = 2011,
     "Belle" = 2021
 }
+
+export enum ProfileProvider {
+    Interknot = "interknot",
+    Enka = "enka"
+}
+
 export interface ProfileInfo {
+    Id: number
     Uid: number
+    Provider: ProfileProvider
     UpdatedAt: Date
     Nickname: string
     Description: string
