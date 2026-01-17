@@ -13,7 +13,6 @@ export enum ProfileProvider {
 }
 
 export interface ProfileInfo {
-    Id: number
     Uid: number
     Provider: ProfileProvider
     UpdatedAt: Date
