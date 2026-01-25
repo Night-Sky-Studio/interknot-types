@@ -1,3 +1,4 @@
+import type { BaseAvatar } from "./Avatar"
 import { type Character } from "./Character"
 import { type ProfileInfo } from "./Profile"
 
@@ -16,13 +17,20 @@ export interface CardCustomization {
     BackgroundTransform?: Transform
 }
 
-export interface Build {
+export interface BaseBuild {
     Id: number
     Name?: string
     Owner?: ProfileInfo
+    IsPublic: boolean
+    IsBanned: boolean
+}
+
+export interface SimpleBuild extends BaseBuild {
+    Character: BaseAvatar
+}
+
+export interface Build extends BaseBuild {
     Character: Character
     CardCustomization?: CardCustomization
     ActiveLeaderboardId?: number
-    IsPublic: boolean
-    IsBanned: boolean
 }
