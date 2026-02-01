@@ -23,6 +23,7 @@ export interface BaseBuild {
     Owner?: ProfileInfo
     IsPublic: boolean
     IsBanned: boolean
+    IsPrimary: boolean
 }
 
 export interface SimpleBuild extends BaseBuild {
