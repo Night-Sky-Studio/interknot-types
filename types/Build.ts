@@ -12,10 +12,11 @@ export interface Transform {
 
 export interface CardCustomization {
     CharacterImageUrl?: string
-    BackgroundImageUrl?: string
+    // BackgroundImageUrl?: string
     CharacterTransform?: Transform
-    BackgroundTransform?: Transform
+    // BackgroundTransform?: Transform
     AccentColor?: string
+    ArtSource?: string
 }
 
 export interface BaseBuild {
