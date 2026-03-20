@@ -5,8 +5,8 @@ import { type ProfileInfo } from "./Profile"
 export interface Transform {
     X?: number
     Y?: number
-    ScaleX?: number
-    ScaleY?: number
+    Scale?: number
+    Flipped?: boolean
     Rotation?: number
 }
 
