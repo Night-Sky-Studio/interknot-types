@@ -3,11 +3,11 @@ import { type Character } from "./Character"
 import { type ProfileInfo } from "./Profile"
 
 export interface Transform {
-    X: number
-    Y: number
-    ScaleX: number
-    ScaleY: number
-    Rotation: number
+    X?: number
+    Y?: number
+    ScaleX?: number
+    ScaleY?: number
+    Rotation?: number
 }
 
 export interface CardCustomization {
