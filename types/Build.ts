@@ -15,6 +15,7 @@ export interface CardCustomization {
     BackgroundImageUrl?: string
     CharacterTransform?: Transform
     BackgroundTransform?: Transform
+    AccentColor?: string
 }
 
 export interface BaseBuild {
