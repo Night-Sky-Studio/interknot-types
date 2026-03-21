@@ -13,6 +13,7 @@ export interface BaseAvatar {
     CircleIconUrl: string
     Colors: {
         Accent: string
+        AccentExtra: string
         Mindscape: string
     }
     HighlightProps: number[]
