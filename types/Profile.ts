@@ -1,3 +1,4 @@
+import type { BaseAccount } from "./Account"
 import type { Character } from "./Character"
 import type { Medal } from "./Medal"
 import type { Title } from "./Title"
@@ -15,6 +16,7 @@ export enum ProfileProvider {
 export interface ProfileInfo {
     Uid: number
     Provider: ProfileProvider
+    Owner?: BaseAccount
     UpdatedAt: Date
     Nickname: string
     Description: string

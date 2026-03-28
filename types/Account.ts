@@ -22,10 +22,13 @@ export enum AccountLevel {
     Admin
 }
 
-export interface Account {
+export interface BaseAccount {
     Id: number
     Username: string
     ProfilePictureUrl: string
+}
+
+export interface Account extends BaseAccount {
     Email: string
     AccountLevel: AccountLevel
     ClaimedProfiles: ProfileInfo[]
