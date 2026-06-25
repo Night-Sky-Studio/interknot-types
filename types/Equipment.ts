@@ -1,9 +1,12 @@
 import type { Property } from "./Property"
 
-export interface Equipment {
+export interface BaseEquipment {
     Id: number
     Name: string
-    Rarity: number
     IconUrl: string
+}
+
+export interface Equipment extends BaseEquipment {
+    Rarity: number
     SetBonusProps: Property[]
 }

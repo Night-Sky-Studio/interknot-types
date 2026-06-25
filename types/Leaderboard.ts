@@ -4,6 +4,7 @@ import { SkillTag } from "./SkillTag"
 import type { Enemy } from "./Enemy"
 import { Property } from "./Property"
 import type { Build } from "./Build"
+import type { BaseEquipment } from "./Equipment"
 
 export interface AgentAction {
     Name: string
@@ -45,8 +46,7 @@ export interface LeaderboardTeamMember {
     MindscapeLevel: number
     Weapon?: BaseWeapon
     WeaponRefinement?: number
-    /** `setId: count` */
-    DriveDiscSetId?: number
+    DriveDiscSet?: BaseEquipment
 }
 
 /**
