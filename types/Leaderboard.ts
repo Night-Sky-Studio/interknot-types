@@ -68,7 +68,7 @@ export interface BaseLeaderboard {
 export interface LeaderboardList extends BaseLeaderboard {
     ParentId?: number
     Children: BaseLeaderboard[]
-    Team: BaseAvatar[] // TODO: Replace with LeaderboardTeamMember[]
+    Team: LeaderboardTeamMember[]
 }
 
 /**
