@@ -43,7 +43,7 @@ export interface LeaderboardProfile {
 export interface LeaderboardTeamMember {
     Character?: BaseAvatar
     Speciality?: string
-    MindscapeLevel: number
+    MindscapeLevel?: number
     Weapon?: BaseWeapon
     WeaponRefinement?: number
     DriveDiscSet?: BaseEquipment
