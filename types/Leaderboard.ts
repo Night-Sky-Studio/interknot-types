@@ -1,7 +1,7 @@
 import type { BaseAvatar } from "./Avatar"
 import type { BaseWeapon } from "./Weapon"
 import { SkillTag } from "./SkillTag"
-import type { Enemy } from "./Enemy"
+import type { CalculatorEnemy } from "./Enemy"
 import { Property } from "./Property"
 import type { Build } from "./Build"
 import type { BaseEquipment } from "./Equipment"
@@ -78,7 +78,7 @@ export interface Leaderboard extends LeaderboardList {
     Description: string
     BackgroundUrl: string
     Rotation: string[]
-    Enemy: Enemy
+    Enemy: CalculatorEnemy
 }
 
 export interface LeaderboardDistribution {
