@@ -1,4 +1,5 @@
 export * from "./types/Account"
+export * from "./types/DeadlyAssault"
 export * from "./types/Avatar"
 export * from "./types/Build"
 export * from "./types/Character"
