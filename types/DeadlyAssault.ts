@@ -5,7 +5,7 @@ export interface AssaultList {
     EnemyIconUrl: string
     StartDate: string
     EndDate: string
-    Count: string
+    Count: number
 }
 
 export interface Buff {
