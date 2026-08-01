@@ -1,3 +1,5 @@
+import type { ProfileInfo } from "./Profile";
+
 export interface AssaultList {
     Id: number
     GameVersion: string
@@ -18,4 +20,10 @@ export interface AssaultDetail extends AssaultList {
     EnemyWeaknesses: string[]
     LayerBuffs: Buff[]
     SelectableBuffs: Buff[]
+}
+
+export interface AssaultLeaderboardEntry {
+    Profile: ProfileInfo
+    TotalValue: number
+    Rank: number
 }
