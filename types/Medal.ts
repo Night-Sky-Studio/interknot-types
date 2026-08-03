@@ -1,4 +1,4 @@
-enum MedalType {
+export enum MedalType {
     ShiyuDefense = 1,
     SimulatedBattleTower = 2,
     DeadlyAssault = 3,
