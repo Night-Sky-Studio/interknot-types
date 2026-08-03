@@ -1,8 +1,9 @@
 enum MedalType {
-    "Shiyu Defense" = 1,
-    "Simulated Battle Tower" = 2,
-    "Deadly Assault" = 3,
-    "Simulated Battle Tower - Last Stand" = 4
+    ShiyuDefense = 1,
+    SimulatedBattleTower = 2,
+    DeadlyAssault = 3,
+    SimulatedBattleTowerLastStand = 4,
+    DeadlyAssaultHardcore = 14
 }
 
 export interface MedalIcon {
