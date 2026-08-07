@@ -26,5 +26,6 @@ export interface AssaultLeaderboardEntry {
     Profile: ProfileInfo
     TotalValue: number
     Rank: number
+    TotalCount: number
     IsBanned: boolean
 }
