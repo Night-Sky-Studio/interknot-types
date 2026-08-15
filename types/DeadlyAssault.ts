@@ -18,6 +18,7 @@ export interface Buff {
 export interface AssaultDetail extends AssaultList {
     EnemyImageUrl: string
     EnemyWeaknesses: string[]
+    EnemyResistances: string[]
     LayerBuffs: Buff[]
     SelectableBuffs: Buff[]
 }
