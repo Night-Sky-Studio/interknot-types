@@ -15,7 +15,9 @@ export class Property {
     ) {
         if (this.Name.includes("Crit") || this.Name.includes("Ratio")) {
             this.FormatType = 1
-        } else if (this.Name.includes("SpRec") || this.Name.includes("RpRec")) {
+        } else if (this.Name.includes("SpRec") || 
+                   this.Name.includes("RpRec") ||
+                   this.Name.includes("EpRec")) {
             this.FormatType = 2
         }
     }
