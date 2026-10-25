@@ -3,7 +3,7 @@
 import type { Property } from "./Property"
 import type { Skin } from "./Skin"
 
-export interface Highlights {
+export interface HighlightedProps {
     BaseProps: number[]
     SubStats: number[]
     Slot4: number[]
@@ -26,7 +26,7 @@ export interface BaseAvatar {
         Mindscape: string
     }
     HighlightProps: number[]
-    Highlights: Highlights
+    Highlights: HighlightedProps
 }
 
 export interface Avatar extends BaseAvatar {
