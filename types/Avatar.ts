@@ -3,6 +3,15 @@
 import type { Property } from "./Property"
 import type { Skin } from "./Skin"
 
+export interface Highlights {
+    BaseProps: number[]
+    SubStats: number[]
+    Slot4: number[]
+    Slot5: number[]
+    Slot6: number[]
+    DriveDiscSets: number[]
+}
+
 export interface BaseAvatar {
     Id: number
     Name: string
@@ -17,6 +26,7 @@ export interface BaseAvatar {
         Mindscape: string
     }
     HighlightProps: number[]
+    Highlights: Highlights
 }
 
 export interface Avatar extends BaseAvatar {
