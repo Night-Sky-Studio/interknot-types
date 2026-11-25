@@ -7,6 +7,7 @@ import type { Build } from "./Build"
 import type { BaseEquipment } from "./Equipment"
 
 export interface AgentAction {
+    Id: string
     Name: string
     Tag: SkillTag
     Damage: number
@@ -15,6 +16,12 @@ export interface AgentAction {
 export interface FinalStats {
     BaseStats: Property[]
     CalculatedStats: Property[]
+}
+
+export interface ActionGroup {
+    AgentId: number
+    Name: string
+    ActionIds: string[]
 }
 
 export interface BaseLeaderboardEntry {
@@ -27,6 +34,7 @@ export interface BaseLeaderboardEntry {
     Type: number
     TotalValue: number
     RotationValue: AgentAction[]
+    Groups: ActionGroup[]
     Rank: number
 }
 
