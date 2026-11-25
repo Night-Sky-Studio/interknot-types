@@ -8,6 +8,7 @@ import type { BaseEquipment } from "./Equipment"
 
 export interface AgentAction {
     Id: string
+    AgentId: number
     Name: string
     Tag: SkillTag
     Damage: number
