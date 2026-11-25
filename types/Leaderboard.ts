@@ -12,6 +12,7 @@ export interface AgentAction {
     Name: string
     Tag: SkillTag
     Damage: number
+    Daze: number
 }
 
 export interface FinalStats {
